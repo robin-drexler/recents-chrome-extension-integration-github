@@ -16,7 +16,6 @@
         {
             "matches": ["<all_urls>"],
             "js": [
-                    "/js/external/jquery.js",
                     "/js/content_script.js"
                 ]
         }
