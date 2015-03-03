@@ -15,6 +15,10 @@
 
       // unset so consecutive calls don't send the request to recents again
       wasRedirected = false;
+      
+      chrome.tabs.get(details.tabId, function (tab) {
+        console.log('tab', tab);
+      });
     }
   }, {
     urls: ['*://github.com/*/pull/*']

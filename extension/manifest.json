@@ -9,7 +9,8 @@
   "description": "Yay, I'm so useless.",
   "permissions": [
     "webRequest",
-    "*://*.github.com/"
+    "*://*.github.com/",
+    "tabs"
   ],
 
   "background": {
