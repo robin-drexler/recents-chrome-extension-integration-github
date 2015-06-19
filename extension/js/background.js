@@ -11,7 +11,8 @@
     urls: ['*://github.com/*/pull/*']
   });
 
-  chrome.webRequest.onCompleted.addListener(function (details) {
+  chrome.webNavigation.onCompleted.addListener(function (details) {
+
     if (wasRedirected) {
       console.log('was redirected', details.tabId);
 
@@ -30,6 +31,6 @@
       });
     }
   }, {
-    urls: ['*://github.com/*/pull/*']
+    url: [{urlMatches: 'github.com/.+/pull/.+'}]
   });
 })();
